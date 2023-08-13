@@ -11,3 +11,22 @@ body {
 html {
     font-family: "Montserrat", sans-serif;
 }
+
+section {
+    /* width: 1000vh;
+    height: 1000vh; */
+}
+
+.display {
+    height: 50px;
+    width: 30%;
+    border: 3px solid red;
+    background-color: burlywood;
+}
+
+.buttons {
+    height: 300px;
+    width: 30%;
+    border: 3px solid brown;
+    background-color: black;
+}
