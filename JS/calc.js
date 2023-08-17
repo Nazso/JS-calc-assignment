@@ -30,8 +30,7 @@ onButton.addEventListener("click", () => {
     }
 })
 
-num.forEach( (e) => {
-    
+num.forEach( (e) => { 
     e.addEventListener('click', () => {
         if(numbers.includes(e.innerText)) {
             
@@ -52,10 +51,6 @@ num.forEach( (e) => {
             console.log(e.innerText)
             display.innerText = btnNumStr;
 
-        }
-        
-        
-        
-    })
-    
+        }       
+    })    
 })
