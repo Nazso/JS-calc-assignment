@@ -11,7 +11,8 @@ const onButton = document.querySelector("#btn-on")
 const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 const operators = ["+", "-", "*", "/", "%", ".", "=", "C", "CE", "DEL"];
 
-let btnNumStr = "";
+let btnNumStrOne = "";
+let btnNumStrTwo = "";
 let opButtonsStr= "";
 let nameStr = "";
 
@@ -34,22 +35,22 @@ num.forEach( (e) => {
     e.addEventListener('click', () => {
         if(numbers.includes(e.innerText)) {
             
-            btnNumStr += (e.innerText);
-            console.log(btnNumStr);
+            btnNumStrOne += (e.innerText);
+            console.log(btnNumStrOne);
            
-            display.innerText = btnNumStr;
+            display.innerText = btnNumStrOne;
 
         }else if(e.innerText === "C") {
             
-            btnNumStr = "";
+            btnNumStrOne = "";
             console.log(e.innerText)
-            display.innerText = btnNumStr;
+            display.innerText = btnNumStrOne;
 
         }else if(e.innerText === "DEL") {
             
-            btnNumStr = btnNumStr.slice(0, -1);
+            btnNumStrOne = btnNumStrOne.slice(0, -1);
             console.log(e.innerText)
-            display.innerText = btnNumStr;
+            display.innerText = btnNumStrOne;
 
         }       
     })    
