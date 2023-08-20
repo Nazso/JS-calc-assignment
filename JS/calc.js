@@ -44,7 +44,6 @@ onButton.addEventListener("click", () => {
 function disabledBtns() {
     num.forEach((e) => {
         e.disabled = true;
-
     })
 }
 
