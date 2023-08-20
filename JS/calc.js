@@ -68,7 +68,40 @@ function addNumbers(op) {
 }
 
 function equalNumbers() {
-    let result = eval(display.innerHTML);
-    console.log(result);
-    display.innerHTML = result;
+    if (display.innerHTML.includes('%')) {
+        let char = display.innerHTML.indexOf("%")
+        let first = display.innerHTML.slice(0, char)
+        let last = display.innerHTML.slice(char + 1)
+
+        let result = parseFloat(first) / 100 * parseFloat(last);
+        display.innerHTML = result;
+
+        console.log(char)
+        console.log(first)
+        console.log(last)
+        console.log(result)
+    } else {
+
+        let result = eval(display.innerHTML);
+        console.log(result);
+        display.innerHTML = result;
+    }
+
+}
+
+function addOperations(addOp) {
+
+    if(addOp === "C") {
+            
+        btnNumStrOne = "";
+        console.log(addOp)
+        display.innerText = btnNumStrOne;
+        
+    }else if(addOp === "DEL") {
+                    
+        btnNumStrOne = display.innerHTML.slice(0, -1);
+        console.log(addOp)
+        display.innerText = btnNumStrOne;
+        
+    }       
 }
