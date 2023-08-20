@@ -7,6 +7,7 @@ const nameInput = document.querySelector("#added-name");
 const saveName = document.querySelector("#save-name");
 
 const onButton = document.querySelector("#btn-on")
+const equalBtn = document.querySelector(".equal-btn")
 
 const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 const operators = ["+", "-", "*", "/", "%", ".", "=", "C", "CE", "DEL"];
@@ -31,27 +32,43 @@ onButton.addEventListener("click", () => {
     }
 })
 
-num.forEach( (e) => { 
-    e.addEventListener('click', () => {
-        if(numbers.includes(e.innerText)) {
+// num.forEach( (e) => { 
+//     e.addEventListener('click', () => {
+
+//         if(numbers.includes(e.innerText)) {
             
-            btnNumStrOne += (e.innerText);
-            console.log(btnNumStrOne);
+//             btnNumStrOne += (e.innerText);
+//             console.log(btnNumStrOne);
            
-            display.innerText = btnNumStrOne;
+//             display.innerText = btnNumStrOne;
 
-        }else if(e.innerText === "C") {
+//         }else if(e.innerText === "C") {
             
-            btnNumStrOne = "";
-            console.log(e.innerText)
-            display.innerText = btnNumStrOne;
+//             btnNumStrOne = "";
+//             console.log(e.innerText)
+//             display.innerText = btnNumStrOne;
 
-        }else if(e.innerText === "DEL") {
+//         }else 
+//         if(e.innerText === "DEL") {
             
-            btnNumStrOne = btnNumStrOne.slice(0, -1);
-            console.log(e.innerText)
-            display.innerText = btnNumStrOne;
+//             btnNumStrOne = btnNumStrOne.slice(0, -1);
+//             console.log(e.innerText)
+//             display.innerText = btnNumStrOne;
 
-        }       
-    })    
-})
+//         }       
+//     })    
+// })
+
+
+
+// solving coverd by YT (ger)
+
+function addNumbers(op) {
+    display.innerHTML += op;
+}
+
+function equalNumbers() {
+    let result = eval(display.innerHTML);
+    console.log(result);
+    display.innerHTML = result;
+}
