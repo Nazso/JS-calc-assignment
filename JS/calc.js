@@ -118,10 +118,28 @@ function addOperations(addOp) {
         console.log(addOp)
         display.innerText = btnNumStrOne;
         
-    }else if(addOp === "DEL") {
+    } else if(addOp === "DEL") {
                     
         btnNumStrOne = display.innerHTML.slice(0, -1);
         console.log(addOp)
+        display.innerText = btnNumStrOne;
+        
+    } else if(addOp === "CE") {
+
+        let text = display.innerText;
+        let char = 0;
+
+        for (let i = 0; i < text.length; i++) {
+
+            if (operators.includes(text[i])) {
+                char = text.lastIndexOf(text[i])
+            }
+        }
+        
+        btnNumStrOne = display.innerHTML.slice(0, char);
+        console.log(addOp)
+        console.log(char)
+        console.log(text)
         display.innerText = btnNumStrOne;
         
     }       
