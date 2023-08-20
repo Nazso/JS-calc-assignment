@@ -76,10 +76,10 @@ function equalNumbers() {
         let result = parseFloat(first) / 100 * parseFloat(last);
         display.innerHTML = result;
 
-        console.log(char)
-        console.log(first)
-        console.log(last)
-        console.log(result)
+        // console.log(char)
+        // console.log(first)
+        // console.log(last)
+        // console.log(result)
     } else {
 
         let result = eval(display.innerHTML);
