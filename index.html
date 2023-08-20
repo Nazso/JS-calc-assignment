@@ -24,28 +24,28 @@
     </section>
     <section class="buttons">
       <div class="numbers">
-        <button class="btn">7</button>
-        <button class="btn">8</button>
-        <button class="btn">9</button>
-        <button class="btn">4</button>
-        <button class="btn">5</button>
-        <button class="btn">6</button>
-        <button class="btn">1</button>
-        <button class="btn">2</button>
-        <button class="btn">3</button>
-        <button class="btn">0</button>
+        <button class="btn" onclick="addNumbers(7)">7</button>
+        <button class="btn" onclick="addNumbers(8)">8</button>
+        <button class="btn" onclick="addNumbers(9)">9</button>
+        <button class="btn" onclick="addNumbers(4)">4</button>
+        <button class="btn" onclick="addNumbers(5)">5</button>
+        <button class="btn" onclick="addNumbers(6)">6</button>
+        <button class="btn" onclick="addNumbers(1)">1</button>
+        <button class="btn" onclick="addNumbers(2)">2</button>
+        <button class="btn" onclick="addNumbers(3)">3</button>
+        <button class="btn" onclick="addNumbers(0)">0</button>
       </div>
       <div class="operators">
         <button class="btn operators-btn delete-values">C</button>
         <button class="btn operators-btn delete-last-value">CE</button>
         <button class="btn operators-btn delete-char">DEL</button>
         <button class="btn operators-btn">%</button>
-        <button class="btn operators-btn">+</button>
-        <button class="btn operators-btn">-</button>
-        <button class="btn operators-btn">*</button>
-        <button class="btn operators-btn">/</button>
+        <button class="btn operators-btn" onclick="addNumbers('+')"> + </button>
+        <button class="btn operators-btn" onclick="addNumbers('-')">-</button>
+        <button class="btn operators-btn" onclick="addNumbers('*')">*</button>
+        <button class="btn operators-btn" onclick="addNumbers('/')">/</button>
         <button class="btn operators-btn">.</button>
-        <button class="btn operators-btn">=</button>
+        <button class="btn operators-btn equal-btn" onclick="equalNumbers()">=</button>
       </div>
     </section>
   </main>
