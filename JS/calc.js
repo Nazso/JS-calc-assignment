@@ -45,7 +45,7 @@ function disabledBtns() {
     num.forEach((e) => {
         e.disabled = true;
     })
-    display.innerHTML = "";
+    display.innerText = "";
 }
 
 // num.forEach( (e) => { 
