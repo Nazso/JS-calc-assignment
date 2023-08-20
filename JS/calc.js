@@ -1,5 +1,6 @@
 const num = document.querySelectorAll(".btn");
 const opButtons = document.querySelectorAll(".btn-op");
+const btnOff = document.querySelector('#btn-off');
 const display = document.querySelector(".display");
 const deleteValues = document.querySelector(".delete-values");
 
@@ -29,8 +30,25 @@ onButton.addEventListener("click", () => {
     } else {
         display.innerHTML = `<p class="welcome-text">Welcome <strong><em>${nameStr}</em></strong>!</p>`
         nameStr = "";
+
+        
+        setTimeout(() => {
+            display.innerHTML = '0';
+        }, 2000)
+
+        num.forEach((e) => {
+            e.disabled = false;
+
+        })
     }
 })
+
+function disabledBtns() {
+    num.forEach((e) => {
+        e.disabled = true;
+
+    })
+}
 
 // num.forEach( (e) => { 
 //     e.addEventListener('click', () => {
@@ -64,7 +82,12 @@ onButton.addEventListener("click", () => {
 // solving coverd by YT (ger)
 
 function addNumbers(op) {
-    display.innerHTML += op;
+    if(display.innerHTML === "0" || display.innerHTML === " " ) {
+        display.innerHTML = "";
+        display.innerHTML += op;
+    }else {
+        display.innerHTML += op;
+    }
 }
 
 function equalNumbers() {
