@@ -30,15 +30,13 @@ onButton.addEventListener("click", () => {
     } else {
         display.innerHTML = `<p class="welcome-text">Welcome <strong><em>${nameStr}</em></strong>!</p>`
         nameStr = "";
-
-        
+       
         setTimeout(() => {
             display.innerHTML = '0';
         }, 2000)
 
         num.forEach((e) => {
             e.disabled = false;
-
         })
     }
 })
