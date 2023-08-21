@@ -142,4 +142,4 @@ function addOperations(addOp) {
         display.innerText = btnNumStrOne;
         
     }       
-}
+};
