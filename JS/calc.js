@@ -22,7 +22,7 @@ saveName.addEventListener("click", () => {
     nameStr = nameInput.value
     console.log(nameStr)
     nameInput.value = "";
-}),
+});
 
 onButton.addEventListener("click", () => {
     if(!nameStr) {
@@ -39,14 +39,14 @@ onButton.addEventListener("click", () => {
             e.disabled = false;
         })
     }
-})
+});
 
 function disabledBtns() {
     num.forEach((e) => {
         e.disabled = true;
     })
     display.innerText = "";
-}
+};
 
 // num.forEach( (e) => { 
 //     e.addEventListener('click', () => {
@@ -86,7 +86,7 @@ function addNumbers(op) {
     }else {
         display.innerHTML += op;
     }
-}
+};
 
 function equalNumbers() {
     if (display.innerHTML.includes('%')) {
@@ -107,8 +107,7 @@ function equalNumbers() {
         console.log(result);
         display.innerHTML = result;
     }
-
-}
+};
 
 function addOperations(addOp) {
 
